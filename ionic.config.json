@@ -1,0 +1,7 @@
+{
+  "name": "butchery-locator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

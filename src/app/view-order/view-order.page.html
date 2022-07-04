@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <!-- <ion-menu-button color="light" autoHide="false"></ion-menu-button> -->
+      <ion-back-button color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="margin-right:50px;" class="title" class="ion-text-center">
+      View Order request
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding animated fadeIn login auth-page">
+  <div *ngIf="medicine">
+    <ion-list tappable>
+      <ion-item [routerLinkActive]="['router-link-active']">
+        <ion-thumbnail slot="start">
+          <img src="{{ medicine.logo }}">
+        </ion-thumbnail>
+        <ion-label>
+          <h1 color="primary">{{ medicine.butchery }}</h1>
+          <h2>{{ medicine.city }}</h2>
+          <h2 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">{{ medicine.location }}</h2>
+          <h3><a href="tel: {{ medicine.phoneNumber }}" target="_blank">{{ medicine.phoneNumber }}</a></h3><br>
+        </ion-label><br>
+        <!-- <ion-icon name="arrow-forward" item-right></ion-icon> -->
+      </ion-item>
+      <div>
+        <p>
+          They want {{ medicine.name }} {{ medicine.quantity }}
+        </p>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
